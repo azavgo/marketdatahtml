@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Market data</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">  
+  </head>
+  <body onload="onLoad()">
+    
+        <section class="exchange">
+          <label for="audusdInput">AU$:</label>
+          <input id="audusdInput" type="number" step="0.01" value="1.00">
+          <button type="button" onclick="exchangeAUDUSD()">To US$:</button>
+        
+          <inline id="audusdOutput"></inline>
+        </section>
+        
+        <section class="exchange">
+          <label for="xrpaudInput">XRP:</label>
+          <input id="xrpaudInput" type="number" step="0.01" value="1.00">
+          <button type="button" onclick="exchangeXRPAUD()">To AU$:</button>
+        
+          <inline id="xrpaudOutput"></inline>
+        </section>
+  
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
