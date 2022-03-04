@@ -8,7 +8,7 @@ const onLoad = async () => {
 /*************************************/
 const audUSD = async () => {
     try {
-        const res = await fetch(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=AUD&to_currency=USD&apikey=TBCROCCJYYPGBQIX`); 
+        const res = await fetch(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=AUD&to_currency=USD&apikey=demo`); 
         const data = await res.json(); 
         const rate = parseFloat(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]); 
         return rate; 
@@ -27,7 +27,7 @@ const exchangeAUDUSD = async () => {
 //TODO: Add AU$ to XRP exchange field. Alpha Vantage only supports XRP to AU$ so I shall need to simply reverse the existing function
 const xrpAUD = async () => {
     try {
-        const res = await fetch(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=XRP&to_currency=AUD&apikey=TBCROCCJYYPGBQIX`); 
+        const res = await fetch(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=XRP&to_currency=AUD&apikey=demo`); 
         const data = await res.json(); 
         const rate = parseFloat(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]); 
         return rate; 
